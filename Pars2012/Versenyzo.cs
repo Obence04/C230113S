@@ -24,5 +24,28 @@ namespace Pars2012
             D2 = s[4] == "X" ? -1 : s[4] == "-" ? -2 : double.Parse(s[4]);
             D3 = s[5] == "X" ? -1 : s[5] == "-" ? -2 : double.Parse(s[5]);
         }
+
+        public double Eredmeny()
+        {
+            double vissza = 0;
+            if (D1 > D2) vissza = D1;
+            if (D2 > D3) vissza = D2;
+            if (D3 > D2 && D3 > D1) vissza = D3;
+            return vissza;
+        }
+        public string Nemzet
+        {
+            get
+            {
+                return NemzetEsKod.Split('(')[0].Trim();
+            }
+        }
+        public string Kod
+        {
+            get
+            {
+                return NemzetEsKod.Split('(')[1].Trim(')');
+            }
+        }
     }
 }
