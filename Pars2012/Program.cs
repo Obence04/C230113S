@@ -57,5 +57,12 @@ namespace Pars2012
                              $"\n\tSorozat: {d1};{d2};{d3}" +
                               "\n\tEredmény: " + Versenyzok[max].Eredmeny());
         }
+
+        private static void Feladat10()
+        {
+            using StreamWriter sw = new("Dontos2012.txt");
+            List<Versenyzo> dontosok = new();
+
+        }
     }
 }
